@@ -1,0 +1,49 @@
+// .admin
+.admin{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 100%;
+  min-height: calc(100vh - 90px);
+
+  // .admin-body
+  &-body{
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    // .admin-body__item
+    &__item{
+      margin-bottom: 60px;
+      &:last-child{
+        margin-bottom: 0;
+        border: 1px solid $border-base;
+        border-radius: 4px;
+        padding: 30px 20px;
+      }
+    }
+  }
+  // .admin-form
+  &-form{
+
+
+    // .admin-form__field
+    &__field{
+      margin-bottom: 24px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.admin-panel{
+  flex: 350px;
+  max-width: 350px;
+  width: 100%;
+  background-color: $lightPrimary-color;
+}
+.admin-content{
+  width: 100%;
+  flex: calc(100% - 350px);
+  max-width: calc(100% - 350px);
+  padding: 0 30px;
+}

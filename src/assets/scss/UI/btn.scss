@@ -1,0 +1,107 @@
+// .btn
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 4px;
+
+  // .btn-switch
+  &-switch {
+    width: 40px;
+    height: 40px;
+    background-color: $default-color;
+    border-radius: 50%;
+    &:hover {
+      .btn-switch__icon {
+        fill: $link-color;
+      }
+    }
+    // .btn-switch__icon
+    &__icon {
+      width: 25px;
+      height: 25px;
+      fill: $color-info;
+      transition: all 0.5s ease;
+    }
+  }
+
+  // .btn--white
+  &-white {
+    color: $default-color;
+    border: 1px solid $default-color;
+    background-color: transparent;
+    &:hover {
+      color: $body-color;
+      background-color: $default-color;
+    }
+  }
+  // .btn-success
+  &-success {
+    color: $default-color;
+    background-color: $success-color;
+    box-shadow: 0px 4px 12px rgba(39, 174, 96, 0.4);
+    &:hover {
+      background-color: $success-hover-color;
+    }
+    &:active {
+      background-color: $success-active-color;
+      box-shadow: 0px 4px 12px rgba(39, 174, 96, 0);
+    }
+  }
+
+  // .btn-main
+  &-main {
+    color: $default-color;
+    background-color: $danger-color;
+    box-shadow: 0px 4px 12px rgba(206, 39, 66, 0.5);
+    &:hover {
+      background-color: $danger-hover-color;
+    }
+    &:active {
+      background-color: $danger-active-color;
+      box-shadow: 0px 4px 12px rgba(206, 39, 66, 0);
+    }
+  }
+
+  // .btn-secondary
+  &-secondary {
+    background-color: transparent;
+    border: 2px solid $neutral-regular;
+    &:hover {
+      background-color: $default-color;
+      border-color: $default-color;
+    }
+    &:active {
+      background-color: $neutral-regular;
+      border-color: $neutral-regular;
+    }
+  }
+
+  // .btn-100
+  &-100 {
+    width: 100%;
+    height: 34px;
+  }
+}
+.btn-md {
+  padding: 10px 22px;
+}
+.btn-sm {
+  padding: 3px 12px;
+}
+
+.form-disabled {
+  .btn {
+    pointer-events: none;
+    opacity: 0.5;
+    border-color: $main-color;
+  }
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  border-color: $main-color;
+}

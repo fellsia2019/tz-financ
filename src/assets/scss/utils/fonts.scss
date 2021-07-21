@@ -1,0 +1,15 @@
+@import "mixins";
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("~/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("~/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Firasans-Italic";
+  src: url("~/assets/fonts/Firasans/Italic/FiraSans-Italic.ttf")
+    format("truetype");
+}

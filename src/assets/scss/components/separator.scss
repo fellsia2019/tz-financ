@@ -1,0 +1,18 @@
+.separator {
+  width: auto;
+  height: 20px;
+  margin: 0 15px;
+  display: inline-block;
+  @media (max-width: $smTableWidth) {
+    margin: 0 10px;
+    height: 15px;
+  }
+  // .separator__double-arrow
+  &__double-arrow {
+    width: 40px;
+    height: 100%;
+    @media (max-width: $smTableWidth) {
+      width: 30px;
+    }
+  }
+}

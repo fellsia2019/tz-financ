@@ -1,0 +1,154 @@
+// .container
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $neutral-primary;
+  height: 100%;
+  background-color: $default-color;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 50px 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-info;
+}
+
+section,
+.section {
+  position: relative;
+  margin: 60px 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  // .wrapper-main
+  &-main {
+    padding-top: 90px;
+    background-color: $body-color;
+    @media (max-width: $smDesktopWidth) {
+      padding-top: 60px;
+    }
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 100px;
+  @media screen and (max-width: $lgDesktopWidth) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 0 20px;
+  }
+}
+.flex-rov {
+  @include flexRow;
+}
+.flex-col {
+  @include flexCol;
+}
+.flex-col-33 {
+  @include flexCol-33;
+}
+.flex-col-50 {
+  @include flexCol-50;
+}
+.flex-col-25 {
+  @include flexCol-25;
+}
+.flex-col-75 {
+  @include flexCol-75;
+}
+
+.mb-30 {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+// --------------------
+
+.box-shadow-dark {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.border-color-main {
+  border-color: $main-color;
+}
+
+.detele-x {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  font-size: 0;
+  color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: rotate(60deg);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+    background: $main-color;
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+    background: $main-color;
+    transform: rotate(-45deg);
+  }
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+.m-0 {
+  margin: 0;
+}
+
+.bg-dark {
+  background-color: $body-color;
+}
+.d-none {
+  display: none;
+}

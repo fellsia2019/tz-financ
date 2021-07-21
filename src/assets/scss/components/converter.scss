@@ -1,0 +1,45 @@
+.converter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  @media (max-width: $smTableWidth) {
+    display: block;
+    text-align: center;
+  }
+  // .converter__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 40%;
+    @media (max-width: $smTableWidth) {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    // .converter__item-currencies
+    &-currencies {
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    // .converter__item-body
+    &-body {
+      display: flex;
+      justify-content: space-between;
+    }
+    // .converter__item-input
+    &-input {
+      max-width: 50%;
+    }
+  }
+
+  // .converter__switch
+  &__switch {
+    margin: 0 15px;
+    @media (max-width: $smTableWidth) {
+      margin: 25px auto;
+    }
+  }
+}
